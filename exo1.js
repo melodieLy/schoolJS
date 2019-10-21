@@ -14,17 +14,13 @@
     => Array : const map1 = array1.map(x => x);
     => objects : https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript
     => Date: https://stackoverflow.com/questions/1090815/how-to-clone-a-date-object;
-    => Function : 
+    => Function : https://flaviocopes.com/how-to-clone-javascript-object/
 */
 var aws;
 
 function deepClone(toClone) {
     var response = "none";
     switch (toClone) {
-        case toClone.constructor == "Array"
-            set();
-            break;
-
         case Date:
             console.log('Date');
             break;    
