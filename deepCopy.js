@@ -45,5 +45,19 @@ function clone(item) {
             return item;
     }
 }
+console.log(myData);
+console.log("------------");
+myNewData = [];
+myData.forEach(element => {
+    myNewData.push(clone(element));
+});
+console.log(myNewData);
+console.log("------------");
+console.log("------------");
+console.log("------------");
+myNewData.pop();
 
-myData.forEach(element =>  clone(element));
+console.log(myData);
+console.log("------------");
+console.log(myNewData);
+console.log("------------");
