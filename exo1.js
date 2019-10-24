@@ -32,7 +32,7 @@ function deepClone(obj) {
                         break;
 
                     case "[object Date]":
-                        result = obj.map(x => x);
+                        result = new Date(obj.getTime());
                         break;
                 
                     default:
