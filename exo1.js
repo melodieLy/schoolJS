@@ -20,25 +20,32 @@
 */
 var aws;
 
-function deepClone(toClone) {
-    var response = "none";
-    switch (toClone) {
-        case Date:
-            console.log('Date');
+function deepClone(obj) {
+    switch (typeof obj) {
+        case "object":
+            if(obj === null) {
+                result = null;
+            } else {
+                switch (toString.call(obj)) {
+                    case "[object Array]":
+                        result = obj.map(x => x);
+                        break;
+
+                    case "[object Date]":
+                        result = obj.map(x => x);
+                        break;
+                
+                    default:
+                        break;
+                }
+            }
             break;    
             
         default:
+            console.log("Not found");
             break;
     }
-    return get();
-
-    function get() {
-        return aws;
-    }
-
-    function set() {
-        return aws = 'array';
-    }
+    return result;
 }
 
 const arr = [];
