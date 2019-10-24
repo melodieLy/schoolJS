@@ -11,7 +11,7 @@
 - Define of to know the type :
     =>  varName.constructor
 - Depending of the precedent result, find a way to deepclone !
-    => Array : const map1 = array1.map(x => x);
+    => Array : const map1 = array1.map(x => x); CLEAR
     => objects : https://stackoverflow.com/questions/122102/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript
         const copied = { ...original }
     => Date: https://stackoverflow.com/questions/1090815/how-to-clone-a-date-object;
