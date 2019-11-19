@@ -18,35 +18,42 @@
     => Function : https://flaviocopes.com/how-to-clone-javascript-object/ 
         
 */
-var aws;
+
+var myData = [
+    1, 
+    "A", 
+    { "id": 1 }, 
+    Date.now, 
+    [
+        "coucou", 
+        { "id": 3 }, 
+       
+        function a(txt) { 
+            console.log(txt); 
+        }
+    ]
+];
 
 function deepClone(obj) {
-    switch (typeof obj) {
-        case "object":
-            if(obj === null) {
-                result = null;
-            } else {
-                switch (toString.call(obj)) {
-                    case "[object Array]":
-                        result = obj.map(x => x);
-                        break;
-
-                    case "[object Date]":
-                        result = new Date(obj.getTime());
-                        break;
-                
-                    default:
-                        break;
-                }
-            }
-            break;    
-            
-        default:
-            console.log("Not found");
+    result = null;
+    switch (toString.call(obj)) {
+        case "[object Array]":
+            result = obj.map(x => x);
             break;
+
+        case "[object Date]":
+            result = new Date(obj.getTime());
+            break;
+    
+        case "[object Object]":
+            result = {...obj};
+        break;
+
+        default:
+            result = obj;
+        break;
     }
     return result;
 }
 
-const arr = [];
-DeepClone(arr);
+deepClone(myData);
