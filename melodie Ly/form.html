@@ -1,0 +1,29 @@
+<!--Faire un formaulaire avec un 
+Id: subcription , 
+un input name=lname, 
+input name=fname 
+input name=age numerique, min et max 18-30, step= 5
+button qui rempli
+button qui vide -->
+
+<script type="text/javascript">
+document.querySelector('button[id="fill"]').addEventListener("click", function(){
+    document.getElementByName('lname').value = "Ly";
+});
+</script>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <form id="subscription">
+        <input name="lname" value="dzdzd"><br>
+        <input name="fname" value=""><br>
+        <input name="age" type="number" min=18 max=30 value=""><br>
+        <button type="submit" id="fill">Fill</button>
+        <button type="submit" id="empty">Empty</button>
+    </form>
+</body>
+</html>
